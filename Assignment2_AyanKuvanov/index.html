@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment #2 — Advanced CSS (Flexbox & Grid)</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+  .task-list a {
+    display: block;
+    border-radius: var(--radius);
+    padding: var(--space-4);
+  }
+  .task-list a:hover { text-decoration: none; border-color: var(--color-primary); }
+  .task-list h2 { margin: 0 0 var(--space-1); font-size: 1.1rem; }
+  .task-list p { margin: 0; color: var(--color-muted); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>Assignment #2 — Advanced CSS (Flexbox &amp; Grid)</h1>
+    </header>
+    <ul class="task-list">
+      <li><a href="task1/index.html">
+        <h2>Task 1 — Geometric Composition</h2>
+        <p>A single 6×6 CSS Grid</p>
+      </a></li>
+      <li><a href="task2/index.html">
+        <h2>Task 2 — Component Library</h2>
+        <p>Navbar, card row, pagination, comment block and pricing table</p>
+      </a></li>
+      <li><a href="task3/index.html">
+        <h2>Task 3 — Three Layouts, One Markup</h2>
+        <p>Containing articles, classes, CSS Grid</p>
+      </a></li>
+    </ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,185 @@
+.mode-switch input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mode-switch__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.mode-switch__tabs label {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: var(--color-surface);
+}
+.mode-switch__tabs label:hover { border-color: var(--color-primary); }
+
+#mode-grid:checked ~ .mode-switch__tabs label[for="mode-grid"],
+#mode-list:checked ~ .mode-switch__tabs label[for="mode-list"],
+#mode-magazine:checked ~ .mode-switch__tabs label[for="mode-magazine"] {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.mode-note {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  max-width: 65ch;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-rows: minmax(0, auto);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.item__media {
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, var(--m1), var(--m2));
+}
+.item__media--a { --m1: #141e20; --m2: #040607; }
+.item__media--b { --m1: #ff0000; --m2: #ff0000; }
+.item__media--c { --m1: #fffb00; --m2: #ffd900; }
+.item__media--d { --m1: #00ff15; --m2: #09ff00; }
+.item__media--e { --m1: #0019fc; --m2: #0432ff; }
+.item__media--f { --m1: #ff00d4; --m2: #ff00dd; }
+
+.item__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+}
+
+.item__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.item__tag {
+  margin: 0 0 var(--space-1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.item h3 {
+  font-size: 1.02rem;
+  margin: 0 0 var(--space-2);
+}
+
+.item__desc {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+.item__date {
+  flex: 0 0 auto;
+  margin: var(--space-2) 0 0;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+#mode-list:checked ~ .gallery {
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+#mode-list:checked ~ .gallery .item {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+}
+
+#mode-list:checked ~ .gallery .item__media {
+  width: 88px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  flex: 0 0 auto;
+}
+
+#mode-list:checked ~ .gallery .item__body {
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+  gap: var(--space-4);
+}
+
+#mode-list:checked ~ .gallery .item__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#mode-list:checked ~ .gallery .item__desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+#mode-list:checked ~ .gallery .item__date {
+  flex: 0 0 auto;
+  margin: 0 0 0 auto;
+  white-space: nowrap;
+}
+
+
+
+#mode-magazine:checked ~ .gallery {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-auto-rows: minmax(130px, auto);
+  grid-auto-flow: dense;
+  gap: var(--space-3);
+}
+#mode-magazine:checked ~ .gallery .item:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+#mode-magazine:checked ~ .gallery .item:first-child .item__media {
+  flex: 1 1 auto;
+  aspect-ratio: auto;
+}
+
+#mode-magazine:checked ~ .gallery .item:first-child h3 {
+  font-size: 1.35rem;
+}
+
+#mode-magazine:checked ~ .gallery .item__media {
+  aspect-ratio: 16 / 9;
+}
+
+#mode-magazine:checked ~ .gallery .item__desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

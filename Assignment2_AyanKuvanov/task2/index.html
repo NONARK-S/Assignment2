@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task 2</title>
+<link rel="stylesheet" href="../shared.css">
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="navbar__logo" href="#">Fieldnote</a>
+    <ul class="navbar__links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Documentation and guides</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">About the team</a></li>
+    </ul>
+    <div class="navbar__actions">
+      <a class="btn btn-ghost" href="#">Log in</a>
+      <a class="btn" href="#">Sign up</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="crumbs"><a href="../index.html">Assignment #2</a> / Task 2</div>
+    <header class="page-header">
+      <h1>Task 2 — Component Library</h1>
+    </header>
+
+    <section class="section">
+      <h2>Feature cards</h2>
+      <div class="card-row">
+        <article class="card">
+          <h3>Offline-first sync</h3>
+          <p>Changes save locally the instant you make them and reconcile with the server
+            the next time you're online.</p>
+          <div class="card__actions">
+            <button class="btn">Learn more</button>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Field templates</h3>
+          <p>Build a reusable form once — soil samples, site surveys, inspection
+            checklists — and reuse it across every project your team runs, no matter
+            how the site conditions change from one visit to the next.</p>
+          <div class="card__actions">
+            <button class="btn">Learn more</button>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Shared maps</h3>
+          <p>Everyone on the crew sees the same pins, in real time.</p>
+          <div class="card__actions">
+            <button class="btn">Learn more</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Pagination</h2>
+      <nav class="pagination" aria-label="Results pages">
+        <div class="pagination__center">
+          <button class="pagination__arrow" aria-label="Previous page">&larr;</button>
+          <ul class="pagination__pages">
+            <li><a href="#" class="is-current">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+          </ul>
+          <button class="pagination__arrow" aria-label="Next page">&rarr;</button>
+        </div>
+        <span class="pagination__count">Showing 41–50 of 214 results</span>
+      </nav>
+    </section>
+
+    <section class="section">
+      <h2>Comment</h2>
+      <div class="comment">
+        <img class="comment__avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='24' fill='%23335c67'/%3E%3Ctext x='24' y='30' font-family='Georgia,serif' font-size='18' fill='%23f5f6f3' text-anchor='middle'%3EMD%3C/text%3E%3C/svg%3E" alt="Portrait of Marta Djuric">
+        <div class="comment__body">
+          <p class="comment__meta"><strong>Marta Djuric</strong> · 2 hours ago</p>
+          <p>Nice work</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Pricing</h2>
+      <div class="pricing">
+        <article class="plan">
+          <h3>Starter</h3>
+          <p class="plan__price">$0<span>/mo</span></p>
+          <p>For solo work</p>
+          <ul>
+            <li>1 project</li>
+            <li>Offline sync</li>
+            <li>Community support</li>
+          </ul>
+          <button class="btn btn-ghost">Choose Starter</button>
+        </article>
+        <article class="plan plan--recommended">
+          <p class="plan__badge">Most popular</p>
+          <h3>Team</h3>
+          <p class="plan__price">$29<span>/mo</span></p>
+          <p>For a team who want to run several  sties at once</p>
+          <ul>
+            <li>Unlimited projects</li>
+            <li>Shared templates</li>
+            <li>Priority support</li>
+            <li>Role-based access</li>
+          </ul>
+          <button class="btn">Choose Team</button>
+        </article>
+        <article class="plan">
+          <h3>Enterprise</h3>
+          <p class="plan__price">Custom</p>
+          <p>For organizations</p>
+          <ul>
+            <li>SSO</li>
+            <li>Dedicated support</li>
+          </ul>
+          <button class="btn btn-ghost">Contact sales</button>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

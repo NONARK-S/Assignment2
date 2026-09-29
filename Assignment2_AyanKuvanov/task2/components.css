@@ -1,0 +1,219 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  background: var(--color-surface);
+  border-bottom: 1px solid;
+  padding: var(--space-3) var(--space-4);
+}
+
+.navbar__logo {
+  flex: 0 0 auto;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+}
+
+.navbar__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  min-width: 0; 
+}
+
+.navbar__links a {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-4);
+}
+
+.card {
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
+
+.card p { color: var(--color-muted); }
+
+.card__actions {
+  margin-top: auto;
+  padding-top: var(--space-3);
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.pagination__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex: 1 1 auto;
+}
+
+.pagination__pages {
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__pages a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.pagination__pages a.is-current {
+  background: var(--color-primary);
+  color: #fff;
+}
+.pagination__pages a:hover { text-decoration: none; background: var(--color-bg); }
+.pagination__pages a.is-current:hover { background: var(--color-primary-dark); }
+
+.pagination__arrow {
+  flex: 0 0 auto;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination__arrow:hover { background: var(--color-surface); }
+
+.pagination__count {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.comment__avatar {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.comment__meta {
+  margin: 0 0 var(--space-1);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-4);
+}
+
+.plan {
+  position: relative;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  box-shadow: var(--shadow);
+}
+
+.plan--recommended {
+  padding-top: calc(var(--space-4) + var(--space-4));
+  padding-bottom: calc(var(--space-4) + var(--space-3));
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 26px rgba(31, 38, 36, 0.16);
+}
+
+.plan__badge {
+  position: absolute;
+  top: var(--space-3);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #1f2624;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.plan__price {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--space-2);
+}
+.plan__price span {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.plan ul {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  flex: 1 1 auto;
+}
+
+.plan li {
+  padding: var(--space-2) 0;
+  border-top: 1px solid;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+.plan li:first-child { border-top: none; }
